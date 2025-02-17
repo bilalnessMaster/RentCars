@@ -8,7 +8,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import Image from "next/image";
-import map from '@/public/map.png'
+import map from '@/public/B6fEt.png'
 
 const Contact = () => {
   const ref = useRef(null);
