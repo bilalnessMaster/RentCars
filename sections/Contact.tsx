@@ -3,7 +3,7 @@ import Tag from "@/components/Tag";
 import { Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
-import "leaflet/dist/leaflet.css";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
