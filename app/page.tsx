@@ -8,6 +8,7 @@ import Hero from "@/sections/Hero";
 import Logoticker from "@/sections/Logoticker";
 import Services from "@/sections/Services";
 
+
 export default function Home() {
   return (
     <>

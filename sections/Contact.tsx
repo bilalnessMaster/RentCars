@@ -6,6 +6,10 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import dynamic from 'next/dynamic'
+const MapComponent = dynamic(() => import('@/components/MapComponent'), {
+  ssr: false, // This disables server-side rendering for this component
+});
 const Contact = () => {
   const ref = useRef(null);
   const InView = useInView(ref, { once: true });
@@ -64,20 +68,7 @@ const Contact = () => {
           </div>
 
           <div className="md:w-2/3 overflow-hidden rounded-md ">
-            <MapContainer
-              style={{
-                height: "50vh",
-                width: "100%",
-              }}
-              center={[31.432026740690574, 120.8439179532812]}
-              zoom={8}
-            >
-              {/* add google map tile url  */}
-              <TileLayer
-                attribution="Google Maps"
-                url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
-              />
-            </MapContainer>
+            <MapComponent />
           </div>
         </div>
       </div>
