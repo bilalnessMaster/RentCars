@@ -7,9 +7,11 @@ import "leaflet/dist/leaflet.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import dynamic from 'next/dynamic'
-const MapComponent = dynamic(() => import('@/components/MapComponent'), {
-  ssr: false, // This disables server-side rendering for this component
-});
+import Image from "next/image";
+import map from '@/public/map.png'
+// const MapComponent = dynamic(() => import('@/components/MapComponent'), {
+//   ssr: false, // This disables server-side rendering for this component
+// });
 const Contact = () => {
   const ref = useRef(null);
   const InView = useInView(ref, { once: true });
@@ -68,7 +70,8 @@ const Contact = () => {
           </div>
 
           <div className="md:w-2/3 overflow-hidden rounded-md ">
-            <MapComponent />
+            {/* <MapComponent /> */}
+            <Image src={map} width={1120} height={637} alt="asdasd"/>
           </div>
         </div>
       </div>
